@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Book Assessment - ML</title>
+      <meta charset="utf-8">
+      <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="styles.css"/>
+
+  </head>
+
+  <body>
+
+    <div class="order-book mdc-card--outlined mdc-layout-grid mdc-elevation--z1">
+        <!-- ... header ... -->
+      <!-- <h6 class="card-header"> Order Book </h6>  -->
+      <div class="CardHeaderText"> Order Book </div>
+
+      <!-- ... sub-header ... -->
+      <h6 class="orderBookSubtitle"> Market Overview </h6>
+      <!-- ... overview cards ... -->
+      <div class="mdc-layout-grid__inner">
+          <div class="overview-card-1 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-elevation--z4">
+              <p class="overview-subtitle">Last Trade</p>
+              <P class="overview-title">$199.25 </p>
+            </div>
+          <div class="overview-card-2 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-elevation--z4">
+              <p class="overview-subtitle">Highest Trade</p>
+              <P class="overview-title">$204.50 </p>
+            </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-top mdc-layout-grid__cell--span-4">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-top">
+              <div class="mdc-layout-grid__inner">
+                <div class="overview-card-3 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-elevation--z4"><span>
+                    <p class="overview-subtitle">Active Buyers</p>
+                    <P class="overview-title"> 7 </p>
+                </span></div>
+                <div class="overview-card-4 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-elevation--z4"><span>
+                  <p class="overview-subtitle">Total Bid Qty</p>
+                  <P class="overview-title"> 94,450  </p>
+                </span></div>
+              </div>
+            </div>
+              <div class="overview-card-5 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--align-bottom mdc-elevation--z4">
+                <p class="overview-subtitle">Bid Range </p>
+                <P class="overview-title">$198.00 - 260.00</p>
+              </div>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-top mdc-layout-grid__cell--span-4">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-top">
+              <div class="mdc-layout-grid__inner">
+                <div class="overview-card-6 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-elevation--z4"><span>
+                    <p class="overview-subtitle">Active Sellers</p>
+                    <P class="overview-title"> 10 </p>
+                </span></div>
+                <div class="overview-card-7 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-elevation--z4"><span>
+                  <p class="overview-subtitle">Total Ask Qty</p>
+                  <P class="overview-title"> 25,326 </p>
+                </span></div>
+              </div>
+            </div>
+              <div class="overview-card-8 mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--align-bottom mdc-elevation--z4">
+                <p class="overview-subtitle">Ask Range </p>
+                <P class="overview-title">$198.50 - 298.00</p>
+              </div>
+          </div>
+      </div>
+      <!-- ... details ... -->
+      <h6 class="orderBookSubtitle"> Details </h6>
+        <!-- ... tables ... -->
+          <div class="mdc-layout-grid__inner">
+            <!-- ... trade history table ... -->
+                <div class="mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-elevation--z4">
+                      <div class="mdc-typography-subtitle2 table-title" role="tablename">Trade History </div>
+                      <div class="mdc-data-table overflow-x-auto">
+                        <div class="mdc-data-table__table-container">
+                          <table class="mdc-data-table__table" aria-label="Trade History">
+                            <thead>
+                              <tr class="mdc-data-table__header-row">
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Price($)</th>
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Quantity</th>
+                                <th class="mdc-data-table__header-cell " role="columnheader" scope="col">Date</th>
+                              </tr>
+                            </thead>
+                            <tbody class="mdc-data-table__content">
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell point-last-trade" id="lastTradePrice" scope="row">199.25</th>
+                                <td class="mdc-data-table__cell">5,000</td>
+                                <td class="mdc-data-table__cell">2020/10/30</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">201.50</th>
+                                <td class="mdc-data-table__cell">1,000</td>
+                                <td class="mdc-data-table__cell">2020/10/28</td>
+                              </tr>
+
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">202.50</th>
+                                <td class="mdc-data-table__cell">1,000</td>
+                                <td class="mdc-data-table__cell">2020/10/28</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">203.50</th>
+                                <td class="mdc-data-table__cell">1,000</td>
+                                <td class="mdc-data-table__cell">2020/10/26</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell point-hightest-trade" id="highestTradePrice" scope="row">204.50</th>
+                                <td class="mdc-data-table__cell">2,500</td>
+                                <td class="mdc-data-table__cell ">2020/10/28</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">198.50</th>
+                                <td class="mdc-data-table__cell">1,000</td>
+                                <td class="mdc-data-table__cell">2020/10/26</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">200.25</th>
+                                <td class="mdc-data-table__cell">1,000</td>
+                                <td class="mdc-data-table__cell">2020/10/26</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">198.00</th>
+                                <td class="mdc-data-table__cell">500</td>
+                                <td class="mdc-data-table__cell ">2020/10/25</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">199.25</th>
+                                <td class="mdc-data-table__cell">500</td>
+                                <td class="mdc-data-table__cell ">2020/10/25</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- ... table pagination ... -->
+                        <!--
+                        <div class="mdc-data-table__pagination">
+                          <div class="mdc-data-table__pagination-trailing">
+                            <div class="mdc-data-table__pagination-navigation">
+                              <div class="mdc-data-table__pagination-total">
+                                1‑10 of 100
+                              </div>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-first-page="true" disabled>
+                                <div class="mdc-button__icon">first_page</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-prev-page="true" disabled>
+                                <div class="mdc-button__icon">chevron_left</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-next-page="true">
+                                <div class="mdc-button__icon">chevron_right</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-last-page="true">
+                                <div class="mdc-button__icon">last_page</div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        -->
+                      </div>
+                    </div>
+
+            <!-- ... buy orders table ... -->
+                <div class="mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-elevation--z4">
+                  <div class="mdc-typography-subtitle2 table-title">Buy Orders</div>
+                  <div class="mdc-data-table overflow-x-auto">
+                    <div class="mdc-data-table__table-container">
+                      <table class="mdc-data-table__table" aria-label="Buy Orders">
+                        <thead>
+                          <tr class="mdc-data-table__header-row">
+                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Price($)</th>
+                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Quantity</th>
+                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Date Time</th>
+                          </tr>
+                        </thead>
+                        <tbody class="mdc-data-table__content">
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">260.00</th>
+                            <td class="mdc-data-table__cell">70,000</td>
+                            <td class="mdc-data-table__cell ">2002/03/13 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">215.00</th>
+                            <td class="mdc-data-table__cell">10,000</td>
+                            <td class="mdc-data-table__cell ">2002/03/14 12:00am</td>
+                          </tr>
+
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">214.50</th>
+                            <td class="mdc-data-table__cell">12,000</td>
+                            <td class="mdc-data-table__cell ">2002/03/15 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">213.00</th>
+                            <td class="mdc-data-table__cell">1,500</td>
+                            <td class="mdc-data-table__cell ">2002/03/16 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">212.00</th>
+                            <td class="mdc-data-table__cell">13,000</td>
+                            <td class="mdc-data-table__cell ">2002/03/17 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">204.00</th>
+                            <td class="mdc-data-table__cell">500</td>
+                            <td class="mdc-data-table__cell ">2002/03/18 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">203.50</th>
+                            <td class="mdc-data-table__cell">900</td>
+                            <td class="mdc-data-table__cell ">2002/03/19 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">202.50</th>
+                            <td class="mdc-data-table__cell">500</td>
+                            <td class="mdc-data-table__cell ">2002/03/20 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">202.25</th>
+                            <td class="mdc-data-table__cell">3,400</td>
+                            <td class="mdc-data-table__cell ">2002/03/21 12:00am</td>
+                          </tr>
+                          <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">202.00</th>
+                            <td class="mdc-data-table__cell">1,200</td>
+                            <td class="mdc-data-table__cell ">2002/03/22 12:00am</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- ... table pagination ... -->
+                    <div class="mdc-data-table__pagination">
+                      <div class="mdc-data-table__pagination-trailing">
+                        <div class="mdc-data-table__pagination-navigation">
+                          <div class="mdc-data-table__pagination-total">
+                            1‑10 of 22
+                          </div>
+                          <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-first-page="true" disabled>
+                            <div class="mdc-button__icon">first_page</div>
+                          </button>
+                          <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-prev-page="true" disabled>
+                            <div class="mdc-button__icon">chevron_left</div>
+                          </button>
+                          <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-next-page="true">
+                            <div class="mdc-button__icon">chevron_right</div>
+                          </button>
+                          <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-last-page="true">
+                            <div class="mdc-button__icon">last_page</div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            <!-- ... sell orders table ... -->
+                <div class="mdc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-elevation--z4">
+                      <div class="mdc-typography-subtitle2 table-title">Seller Orders </div>
+                      <div class="mdc-data-table overflow-x-auto">
+                        <div class="mdc-data-table__table-container">
+                          <table class="mdc-data-table__table" aria-label="Sell Orders">
+                            <thead>
+                              <tr class="mdc-data-table__header-row">
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Price($)</th>
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Quantity</th>
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Date Time</th>
+                              </tr>
+                            </thead>
+                            <tbody class="mdc-data-table__content">
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">198.50</th>
+                                <td class="mdc-data-table__cell">800</td>
+                                <td class="mdc-data-table__cell ">2002/03/10 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">199.00</th>
+                                <td class="mdc-data-table__cell">200</td>
+                                <td class="mdc-data-table__cell ">2002/03/11 12:00am</td>
+                              </tr>
+
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">200.00</th>
+                                <td class="mdc-data-table__cell">1,451</td>
+                                <td class="mdc-data-table__cell ">2002/03/12 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">200.25</th>
+                                <td class="mdc-data-table__cell">2,050</td>
+                                <td class="mdc-data-table__cell ">2002/03/13 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">200.50</th>
+                                <td class="mdc-data-table__cell">550</td>
+                                <td class="mdc-data-table__cell ">2002/03/14 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">201.00</th>
+                                <td class="mdc-data-table__cell">1,275</td>
+                                <td class="mdc-data-table__cell ">2002/03/15 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">201.25</th>
+                                <td class="mdc-data-table__cell">500</td>
+                                <td class="mdc-data-table__cell ">2002/03/16 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">201.75</th>
+                                <td class="mdc-data-table__cell">1,200</td>
+                                <td class="mdc-data-table__cell ">2002/03/17 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">202.00</th>
+                                <td class="mdc-data-table__cell">700</td>
+                                <td class="mdc-data-table__cell ">2002/03/18 12:00am</td>
+                              </tr>
+                              <tr class="mdc-data-table__row">
+                                <th class="mdc-data-table__cell" scope="row">202.50</th>
+                                <td class="mdc-data-table__cell">800</td>
+                                <td class="mdc-data-table__cell ">2002/03/19 12:00am</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- ... table pagination ... -->
+                        <div class="mdc-data-table__pagination">
+                          <div class="mdc-data-table__pagination-trailing">
+                            <div class="mdc-data-table__pagination-navigation">
+                              <div class="mdc-data-table__pagination-total">
+                                1‑10 of 22
+                              </div>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-first-page="true" disabled>
+                                <div class="mdc-button__icon">first_page</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-prev-page="true" disabled>
+                                <div class="mdc-button__icon">chevron_left</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-next-page="true">
+                                <div class="mdc-button__icon">chevron_right</div>
+                              </button>
+                              <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-last-page="true">
+                                <div class="mdc-button__icon">last_page</div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+
+      <!-- disclaimer-->
+      <p class="disclaimer"> DISCLAIMER: THE INFORMATION CONTAINED HEREIN IS PROVIDED FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY. NONE OF THE INFORMATION PROVIDED REPRESENTS AN OFFER TO BUY OR SELL, OR THE SOLICITATION OF AN OFFER TO BUY OR SELL, ANY SECURITY, NOR DOES IT CONSTITUTE AN OFFER TO PROVIDE LEGAL, TAX, FINANCIAL OR INVESTMENT ADVICE OR SERVICE.</p>
+
+
+
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,164 @@
+
+/* global */
+:root {
+  --blue1: #3D5AFE;
+  --blue2:#42A5F5;
+  --green1: #00796B;
+  --green2: #7CB342;
+  --green3: #42B391;
+  --orange1: #FFA000;
+  --orange2: #FF6D00;
+  --pink: #ED629C;
+  --subtitleColor: #6A6A6A;
+  --disabledColor: #E5E5E5;
+  font-family:'robota', sans-serif;
+}
+
+/* cards global styels   */
+.order-book {
+  max-width: 960px;
+  padding:40px 40px;
+}
+
+.mdc-card {
+  padding: 16px;
+}
+
+.CardHeaderText {
+  font-size: 20px;
+  font-weight: 600;
+  height: 30px;
+  color:black;
+  padding-bottom: 16px;
+  border-bottom: 0.6px solid var(--disabledColor);
+}
+
+.orderBookSubtitle {
+  color: var(--subtitleColor);
+  font-size: 14px;
+  margin:16px 0px;
+}
+
+
+/* overview cards styles   */
+.overview-card-1 {
+  padding: 12px;
+  height: 140px;
+  background-color:var(--blue1);
+}
+
+.overview-card-2 {
+  padding: 12px;
+  height: 140px;
+  background-color:var(--blue2);
+}
+
+.overview-card-3 {
+  padding: 12px;
+  height: 66px;
+  background-color:var(--green1);
+}
+
+.overview-card-4 {
+  padding: 12px;
+  height: 66px;
+  background-color:var(--green2);
+}
+
+.overview-card-5 {
+  padding: 12px;
+  margin-top: 8px;
+  height: 66px;
+  background-color:var(--green3);
+}
+
+.overview-card-6 {
+  padding: 12px;
+  height: 66px;
+  background-color:var(--orange1);
+}
+
+.overview-card-7 {
+  padding: 12px;
+  height: 66px;
+  background-color:var(--orange2);
+}
+
+.overview-card-8 {
+  padding: 12px;
+  margin-top: 8px;
+  height: 66px;
+  background-color:var(--pink);
+}
+
+
+.overview-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.overview-subtitle {
+  color: white;
+  font-size: 10px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+
+
+
+/* tables */
+.mdc-data-table {
+  display: block;
+  border-style: none;
+}
+
+.table-title {
+  padding: 8px;
+}
+
+ .overflow-x-auto {
+     overflow-x: auto;
+ }
+
+ .mdc-data-table__header-cell {
+      padding:0px 6px;
+      flex: 0 0 35%;
+      font-size:10px;
+      color: var(--subtitleColor);
+ }
+
+.mdc-data-table__cell {
+      padding:0px 6px;
+      flex: 0 0 35%;
+      font-size:10px;
+      color: black;
+ }
+
+.point-last-trade {
+  color: var(--blue);
+}
+
+.point-hightest-trade{
+  color:var(--lightblue);
+}
+
+#lastTradePrice {
+  color: var(--blue1);
+}
+
+#highestTradePrice {
+  color: var(--blue2);s
+}
+
+
+/* disclaimeer*/
+.disclaimer{
+  margin: 2rem 0;
+  font-size: 10px;
+  color: var(--subtitleColor);
+  letter-spacing: 0.15px;
+}
